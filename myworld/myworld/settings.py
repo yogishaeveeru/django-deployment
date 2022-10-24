@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'members.apps.MembersConfig',
-    'crispy_forms',
 ]
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
