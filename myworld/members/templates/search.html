@@ -1,0 +1,24 @@
+{% extends 'template.html' %} 
+{% block search %}
+<br><a class="sub" href="{% url 'index' %}"><button>Search more</button></a>
+<br>
+<h3>Search Result for Origin Country : {{xid}}</h3>
+{% if mymember %}
+<table>
+    <tr>
+      <th>ID</th>
+      <th>Brand Name</th>
+      <th>Origin Country</th>
+    </tr>
+    {% for m in mymember %}
+    <tr>
+        <td>{{ m.id }}</td>
+        <td>{{ m.BrandName }}</td>
+        <td>{{ m.OriginCountry }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  {% else %}
+  <p>No result for: {{xid}} </p>
+  {% endif %}
+{% endblock %}

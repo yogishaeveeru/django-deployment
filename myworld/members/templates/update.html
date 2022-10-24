@@ -1,0 +1,16 @@
+<h1>Update member</h1>
+{% if mymember %}
+<form action="updaterecord/{{ mymember.id }}" method="post">
+{% csrf_token %}
+Brand Name:<br>
+<input name="BrandName" value="{{ mymember.BrandName }}">
+<br><br>
+Origin Country:<br>
+<input name="OriginCountry" value="{{ mymember.OriginCountry }}">
+<br><br>
+<input type="submit" value="Submit">
+{% else %}
+<p>No brand with Id: {{id}}</p>
+<a href="{% url 'index' %}"><button>update other</button></a>
+{% endif %}
+</form>

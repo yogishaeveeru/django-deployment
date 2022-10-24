@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Django</title>
+</head>
+<body>
+  {% block search %}
+  <div class="main">
+      <div>
+       <form action="update/" method="post">
+        {% csrf_token %}
+        <label for="id">Enter existing ID to update:</label><br><input type="number" name="id" min="1" required><br><br>
+        <input class="sub" type="submit" value="Update">
+       </form>
+    </div>
+      <div >
+        <label for="add">Add new Brand</label><br><br><br>
+        <a href="add/" name="add"><button>Add member</button></a>
+      </div>
+      <div>
+      <form action="searchRecord/" method="get">
+        Search By Origin Country : <br><input type="text" name="OriginCountry" placeholder="Enter Origin Country" required>
+        <br><br><input class="sub" type="submit" value="Search">
+      </form>
+      </div>
+      <div>
+        <form action="delete/" method="post">
+         <label for="id">Enter existing ID to Delete:</label><br><input type="number" name="id" min="1" required><br><br>
+         <input class="sub" type="submit" value="Delete">
+        </form>
+     </div>
+  </div>{% endblock %}
+</body>
+</html>

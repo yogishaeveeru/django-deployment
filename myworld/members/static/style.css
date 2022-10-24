@@ -1,0 +1,49 @@
+body{
+    background-color:rgb(196, 255, 210);
+}
+table,tr,th,td{
+    border: 3px solid grey;
+    border-collapse: collapse;
+    padding: 8px;
+}
+th{
+    color: crimson;
+}
+.main{
+    display: flex;
+    gap: 20px;
+}
+/* button{
+    border-radius: 5px;
+    background-color: #e212a3;
+    color: white;
+} */
+/* .sub{
+    border-radius: 5px;
+    background-color: #e212a3;
+    color: white;
+}
+.sub:hover{
+    animation: pulse 1s;
+    box-shadow: 0 0 0 2em transparent;
+} */
+.sub,button {
+    height: 20px;
+    --h: 3em;  
+    color: #0000;
+    overflow: hidden;
+    text-shadow: 
+      0 var(--_t,var(--h)) #fff,
+      0 0 var(--_c,#000);
+    background: 
+      linear-gradient(#1095c1 0 0) 
+      bottom/100% var(--_d, 0) no-repeat;
+    transition: 0.1s;
+    background-color: #e212a3;
+    border-radius: 5px;
+  }
+  .sub:hover,button:hover {
+    --_d: 100%;
+    --_t: 0;
+    --_c: #0000;
+  }
